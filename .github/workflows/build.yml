@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
-          cache-dependency-path: ag-prueba-front/package.lock
+          cache-dependency-path: ag-prueba-front/package.json
 
       - name: Install dependencies and Test Frontend
         run: |
