@@ -1,0 +1,26 @@
+[32m30 11 2025 23:07:49.012:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9876/
+[32m30 11 2025 23:07:49.015:INFO [launcher]: [39mLaunching browsers Chrome with concurrency unlimited
+[32m30 11 2025 23:07:49.069:INFO [launcher]: [39mStarting browser Chrome
+[32m30 11 2025 23:07:50.961:INFO [Chrome 142.0.0.0 (Windows 10)]: [39mConnected on socket o-kcJsMSQMB6FaFXAAAB with id 40712026
+Chrome 142.0.0.0 (Windows 10): Executed 0 of 12[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 1 of 12[32m SUCCESS[39m (0 secs / 0.016 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 2 of 12[32m SUCCESS[39m (0 secs / 0.054 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 3 of 12[32m SUCCESS[39m (0 secs / 0.092 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 4 of 12[32m SUCCESS[39m (0 secs / 0.104 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 5 of 12[32m SUCCESS[39m (0 secs / 0.11 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 6 of 12[32m SUCCESS[39m (0 secs / 0.12 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 7 of 12[32m SUCCESS[39m (0 secs / 0.127 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 8 of 12[32m SUCCESS[39m (0 secs / 0.13 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 9 of 12[32m SUCCESS[39m (0 secs / 0.133 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 10 of 12[32m SUCCESS[39m (0 secs / 0.138 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 11 of 12[32m SUCCESS[39m (0 secs / 0.139 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 12 of 12[32m SUCCESS[39m (0 secs / 0.14 secs)
+[1A[2KChrome 142.0.0.0 (Windows 10): Executed 12 of 12[32m SUCCESS[39m (0.148 secs / 0.14 secs)
+[32mTOTAL: 12 SUCCESS[39m
+
+=============================== Coverage summary ===============================
+Statements   : 57.62% ( 68/118 )
+Branches     : 25% ( 2/8 )
+Functions    : 52.27% ( 23/44 )
+Lines        : 57.26% ( 67/117 )
+================================================================================

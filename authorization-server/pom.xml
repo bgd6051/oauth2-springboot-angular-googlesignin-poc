@@ -126,6 +126,43 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- 1. SpotBugs: Detecta errores lógicos y bugs potenciales -->
+			<plugin>
+					<groupId>com.github.spotbugs</groupId>
+					<artifactId>spotbugs-maven-plugin</artifactId>
+					<version>4.8.3.1</version>
+					<configuration>
+							<effort>Max</effort>
+							<threshold>High</threshold> <!-- Solo reportar errores de confianza ALTA -->
+							<failOnError>true</failOnError> <!-- Romper el build si hay errores -->
+					</configuration>
+					<executions>
+							<execution>
+									<goals>
+											<goal>check</goal>
+									</goals>
+							</execution>
+					</executions>
+			</plugin>
+
+			<!-- 2. Checkstyle: Verifica formato y estilo de código -->
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>3.3.1</version>
+					<configuration>
+							<configLocation>google_checks.xml</configLocation> <!-- Estándar Google -->
+							<consoleOutput>true</consoleOutput>
+							<failOnViolation>true</failOnViolation> <!-- Romper el build si hay mal formato -->
+					</configuration>
+					<executions>
+							<execution>
+									<goals>
+											<goal>check</goal>
+									</goals>
+							</execution>
+					</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
