@@ -1,7 +1,7 @@
 name: Pipeline de Entrega Continua (CD)
 
 on:
-  push:
+  pull_request:
     branches: [develop]
 
 jobs:
@@ -18,8 +18,12 @@ jobs:
 
       - name: Build Backend (Emulando Despliegue)
         run: |
-          cd authorization-server && ./mvnw package -DskipTests
-          cd ../resource-server && ./mvnw package -DskipTests
+          cd authorization-server
+          chmod +x mvnw
+          ./mvnw package -DskipTests
+          cd ../resource-server
+          chmod +x mvnw
+          ./mvnw package -DskipTests
           echo "Artefactos .jar generados y listos para producción."
 
       - name: Build Frontend (Emulando Despliegue)
@@ -30,4 +34,4 @@ jobs:
           echo "Frontend compilado. Sincronizando con servidor de estáticos..."
 
       - name: Confirmación de éxito
-        run: echo "El despliegue ha finalizado correctamente en todos los módulos."
+        run: echo "Entorno configurado como ${{ vars.APP_ENVIRONMENT }}"
