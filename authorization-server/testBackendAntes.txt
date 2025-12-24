@@ -1,0 +1,87 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.aghairsalon:authorization-server >----------------
+[INFO] Building authorization-server 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ authorization-server ---
+[INFO] Deleting C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\authorization-server\target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (prepare-agent) @ authorization-server ---
+[INFO] argLine set to -javaagent:C:\\Users\\darck\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.12\\org.jacoco.agent-0.8.12-runtime.jar=destfile=C:\\Users\\darck\\Documents\\oauth2-springboot-angular-googlesignin-poc\\authorization-server\\target\\jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ authorization-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ authorization-server ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 29 source files with javac [debug parameters release 17] to target\classes
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/entity/AppUser.java:[29,21] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/entity/AppUser.java:[30,21] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/entity/AppUser.java:[31,21] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/entity/AppUser.java:[32,21] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/config/AuthorizationSecurityConfig.java:[73,13] <C>apply(C) in org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder has been deprecated and marked for removal
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/config/AuthorizationSecurityConfig.java:[93,17] <C>apply(C) in org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder has been deprecated and marked for removal
+[WARNING] /C:/Users/darck/Documents/oauth2-springboot-angular-googlesignin-poc/authorization-server/src/main/java/com/aghairsalon/authorizationserver/federated/FederatedIdentityAuthenticationEntryPoint.java:[41,58] fromHttpRequest(org.springframework.http.HttpRequest) in org.springframework.web.util.UriComponentsBuilder has been deprecated and marked for removal
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ authorization-server ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ authorization-server ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ authorization-server ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.aghairsalon.authorizationserver.AuthorizationServerApplicationTests
+23:10:58.765 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.aghairsalon.authorizationserver.AuthorizationServerApplicationTests]: AuthorizationServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:10:58.926 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.aghairsalon.authorizationserver.AuthorizationServerApplication for test class com.aghairsalon.authorizationserver.AuthorizationServerApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2025-11-30T23:10:59.495+01:00  INFO 15968 --- [           main] .a.a.AuthorizationServerApplicationTests : Starting AuthorizationServerApplicationTests using Java 23.0.2 with PID 15968 (started by darck in C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\authorization-server)
+2025-11-30T23:10:59.496+01:00  INFO 15968 --- [           main] .a.a.AuthorizationServerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-11-30T23:11:00.454+01:00  INFO 15968 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-30T23:11:00.553+01:00  INFO 15968 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 5 JPA repository interfaces.
+2025-11-30T23:11:01.237+01:00  INFO 15968 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-30T23:11:01.336+01:00  INFO 15968 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-11-30T23:11:01.388+01:00  INFO 15968 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-30T23:11:01.939+01:00  INFO 15968 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-30T23:11:02.002+01:00  INFO 15968 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-30T23:11:02.487+01:00  INFO 15968 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-30T23:11:02.490+01:00  INFO 15968 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-30T23:11:02.527+01:00  WARN 15968 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-30T23:11:03.959+01:00  INFO 15968 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-30T23:11:04.039+01:00  INFO 15968 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-30T23:11:04.536+01:00  WARN 15968 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-30T23:11:04.655+01:00  INFO 15968 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-11-30T23:11:06.016+01:00  INFO 15968 --- [           main] .a.a.AuthorizationServerApplicationTests : Started AuthorizationServerApplicationTests in 6.867 seconds (process running for 8.455)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.071 s -- in com.aghairsalon.authorizationserver.AuthorizationServerApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report) @ authorization-server ---
+[INFO] Loading execution data file C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\authorization-server\target\jacoco.exec
+[INFO] Analyzed bundle 'authorization-server' with 24 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.834 s
+[INFO] Finished at: 2025-11-30T23:11:07+01:00
+[INFO] ------------------------------------------------------------------------

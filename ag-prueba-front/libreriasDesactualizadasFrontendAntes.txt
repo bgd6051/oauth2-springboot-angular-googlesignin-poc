@@ -1,0 +1,19 @@
+Package                            Current   Wanted   Latest  Location                                        Depended by
+@angular-devkit/build-angular       18.2.3  18.2.21  19.2.19  node_modules/@angular-devkit/build-angular      ag-prueba-front
+@angular/animations                 18.2.3  18.2.14  19.2.16  node_modules/@angular/animations                ag-prueba-front
+@angular/cli                        18.2.3  18.2.21  19.2.19  node_modules/@angular/cli                       ag-prueba-front
+@angular/common                     18.2.3  18.2.14  19.2.16  node_modules/@angular/common                    ag-prueba-front
+@angular/compiler                   18.2.3  18.2.14  19.2.16  node_modules/@angular/compiler                  ag-prueba-front
+@angular/compiler-cli               18.2.3  18.2.14  19.2.16  node_modules/@angular/compiler-cli              ag-prueba-front
+@angular/core                       18.2.3  18.2.14  19.2.16  node_modules/@angular/core                      ag-prueba-front
+@angular/forms                      18.2.3  18.2.14  19.2.16  node_modules/@angular/forms                     ag-prueba-front
+@angular/platform-browser           18.2.3  18.2.14  19.2.16  node_modules/@angular/platform-browser          ag-prueba-front
+@angular/platform-browser-dynamic   18.2.3  18.2.14  19.2.16  node_modules/@angular/platform-browser-dynamic  ag-prueba-front
+@angular/router                     18.2.3  18.2.14  19.2.16  node_modules/@angular/router                    ag-prueba-front
+@types/jasmine                       5.1.4   5.1.13   5.1.13  node_modules/@types/jasmine                     ag-prueba-front
+jasmine-core                         5.2.0    5.2.0   5.12.1  node_modules/jasmine-core                       ag-prueba-front
+nanoid                               5.0.7    5.1.6    5.1.6  node_modules/nanoid                             ag-prueba-front
+rxjs                                 7.8.1    7.8.2    7.8.2  node_modules/rxjs                               ag-prueba-front
+tslib                                2.7.0    2.8.1    2.8.1  node_modules/tslib                              ag-prueba-front
+typescript                           5.5.4    5.5.4    5.9.3  node_modules/typescript                         ag-prueba-front
+zone.js                            0.14.10  0.14.10   0.16.0  node_modules/zone.js                            ag-prueba-front

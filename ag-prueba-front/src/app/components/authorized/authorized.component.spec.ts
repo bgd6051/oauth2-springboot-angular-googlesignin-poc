@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AuthorizedComponent } from './authorized.component';
 
 describe('AuthorizedComponent', () => {
@@ -8,9 +9,9 @@ describe('AuthorizedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthorizedComponent]
-    })
-    .compileComponents();
+      declarations: [AuthorizedComponent],
+      imports: [RouterTestingModule, HttpClientTestingModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AuthorizedComponent);
     component = fixture.componentInstance;

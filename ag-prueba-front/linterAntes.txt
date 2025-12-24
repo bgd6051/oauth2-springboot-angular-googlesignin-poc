@@ -1,0 +1,65 @@
+
+Linting "ag-prueba-front"...
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\app.component.ts
+  17:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\components\admin\admin.component.ts
+  15:5  error    Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  18:3  warning  Lifecycle interface 'OnInit' should be implemented for method 'ngOnInit'. (https://angular.dev/style-guide#use-lifecycle-hook-interfaces)                               @angular-eslint/use-lifecycle-interface
+  23:9  error    Unexpected console statement                                                                                                                                            no-console
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\components\authorized\authorized.component.ts
+  17:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  18:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  19:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  20:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  39:9  error  Unexpected console statement                                                                                                                                            no-console
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\components\logout\logout.component.ts
+  15:5  error    Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  16:5  error    Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  19:3  warning  Lifecycle interface 'OnInit' should be implemented for method 'ngOnInit'. (https://angular.dev/style-guide#use-lifecycle-hook-interfaces)                               @angular-eslint/use-lifecycle-interface
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\components\menu\menu.component.html
+  12:33  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+  16:54  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+  20:88  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+  21:88  error  Use built-in control flow instead of directive ngIf  @angular-eslint/template/prefer-control-flow
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\components\menu\menu.component.ts
+  24:11  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  34:5   error    Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  37:3   error    Lifecycle methods should not be empty                                                                                                                                   @angular-eslint/no-empty-lifecycle-method
+  37:20  error    Unexpected empty method 'ngOnInit'                                                                                                                                      @typescript-eslint/no-empty-function
+  59:9   error    'result' is never reassigned. Use 'const' instead                                                                                                                       prefer-const
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\components\user\user.component.ts
+  16:5  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  24:9  error  Unexpected console statement                                                                                                                                            no-console
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\interceptors\resource.interceptor.ts
+  13:15  error  Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\services\auth.service.ts
+  13:15  error    Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  15:67  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  16:9   error    'body' is never reassigned. Use 'const' instead                                                                                                                         prefer-const
+  30:33  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\services\resource.service.ts
+  13:15  error    Prefer using the inject() function over constructor parameter injection. Use Angular's migration schematic to automatically refactor: ng generate @angular/core:inject  @angular-eslint/prefer-inject
+  15:29  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  16:32  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  19:30  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+  20:32  warning  Unexpected any. Specify a different type                                                                                                                                @typescript-eslint/no-explicit-any
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\app\services\token.service.ts
+  14:17  error  Unexpected empty constructor  @typescript-eslint/no-empty-function
+
+C:\Users\darck\Documents\oauth2-springboot-angular-googlesignin-poc\ag-prueba-front\src\main.ts
+  6:28  error  Unexpected console statement  no-console
+
+Ô£û 35 problems (26 errors, 9 warnings)
+  2 errors and 2 warnings potentially fixable with the `--fix` option.
+
