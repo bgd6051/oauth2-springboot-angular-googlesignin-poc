@@ -1,8 +1,8 @@
 name: Pipeline de Entrega Continua (CD)
 
 on:
-  pull_request:
-    branches: [develop]
+  push:
+    branches: [develop, Pipeline-cd]
 
 jobs:
   build-and-deploy:
