@@ -1,0 +1,50 @@
+name: Security & Compliance Pipeline
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Secret Scanning (Gitleaks)
+        uses: gitleaks/gitleaks-action@v2.3.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Generate SBOM (Backend)
+        run: |
+          cd authorization-server 
+          chmod +x mvnw
+          ./mvnw org.cyclonedx:cyclonedx-maven-plugin:makeAggregateBom
+
+      - name: Vulnerability Scan (Trivy)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: "fs"
+          ignore-unfixed: true
+          format: "table"
+          severity: "CRITICAL,HIGH"
+
+      - name: Build for Artifacts
+        run: |
+          cd authorization-server && ./mvnw package -DskipTests
+
+      - name: Store Versioned Binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: auth-server-build-${{ github.sha }}
+          path: authorization-server/target/*.jar
+          retention-days: 5
