@@ -1,4 +1,4 @@
-name: Security & Compliance Pipeline
+name: Security & Compliance Pipeline (OKR 4)
 
 on:
   pull_request:
@@ -11,9 +11,11 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Secret Scanning (Gitleaks)
-        uses: gitleaks/gitleaks-action@v2.3.4
+        uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
