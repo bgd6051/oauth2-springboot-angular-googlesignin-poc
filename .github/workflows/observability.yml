@@ -1,4 +1,4 @@
-name: Observability & Performance Check (OKR 5)
+name: Observability & Performance Check
 
 on:
   push:
@@ -33,11 +33,8 @@ jobs:
         run: |
           cd authorization-server 
           chmod +x mvnw
-          # Arrancamos el servidor en segundo plano
           ./mvnw spring-boot:run &
-          # Esperamos a que arranque (polling)
           echo "Esperando a que arranque el servidor..."
-          # Aumentamos el timeout y la espera para dar tiempo a Spring y MySQL
           timeout 120s bash -c 'until curl -s http://localhost:9000/actuator/health | grep UP; do sleep 5; done'
           echo "Backend UP. Obteniendo métricas..."
           curl -s http://localhost:9000/actuator/metrics > backend_metrics.json
