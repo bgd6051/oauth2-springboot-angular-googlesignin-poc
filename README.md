@@ -1,4 +1,3 @@
-
 # Proyecto de Prueba OAuth2 con Spring Boot, Angular y Google Sign-In
 
 Este proyecto de prueba demuestra la implementación de autenticación y autorización utilizando OAuth2 Server Authorization con generación de tokens, así como la integración con Google Sign-In. El proyecto utiliza las siguientes tecnologías:
@@ -31,66 +30,72 @@ Este proyecto de prueba demuestra la implementación de autenticación y autoriz
 
 1. Clona el repositorio:
 
-    ```bash
-    git clone https://github.com/antruigon/oauth2-springboot-angular-googlesignin-poc.git
-    cd oauth2-springboot-angular-googlesignin-poc
-    ```
+   ```bash
+   git clone https://github.com/antruigon/oauth2-springboot-angular-googlesignin-poc.git
+   cd oauth2-springboot-angular-googlesignin-poc
+   ```
 
 2. Configura las propiedades de la base de datos en `src/main/resources/application.properties`:
 
-    ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/tu_base_de_datos
-    spring.datasource.username=tu_usuario
-    spring.datasource.password=tu_contraseña
-    ```
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/tu_base_de_datos
+   spring.datasource.username=tu_usuario
+   spring.datasource.password=tu_contraseña
+   ```
 
 3. Configura las propiedades de OAuth2 y Google Sign-In en `src/main/resources/application.properties`:
 
-    ```properties
-    spring.security.oauth2.client.registration.google.client-id=TU_CLIENT_ID
-    spring.security.oauth2.client.registration.google.client-secret=TU_CLIENT_SECRET
-    spring.security.oauth2.client.registration.google.scope=profile,email
-    ```
+   ```properties
+   spring.security.oauth2.client.registration.google.client-id=TU_CLIENT_ID
+   spring.security.oauth2.client.registration.google.client-secret=TU_CLIENT_SECRET
+   spring.security.oauth2.client.registration.google.scope=profile,email
+   ```
 
 4. Ejecuta la aplicación Spring Boot:
-	1. Navega al directorio del Servidor de Autenticación:
 
-    ```bash
-    cd authorization-server
-    ```
-	2. Ejecuta el servidor con
-	```bash
-    ./mvn spring-boot:run
-    ```
+   1. Navega al directorio del Servidor de Autenticación:
 
-	3. Navega al directorio del Servidor de Recursos:
+   ```bash
+   cd authorization-server
+   ```
 
-    ```bash
-    cd resource-server
-    ```
-	4. Ejecuta el servidor con
-	```bash
-    ./mvnw spring-boot:run
-    ```
+   2. Ejecuta el servidor con
+
+   ```bash
+   ./mvn spring-boot:run
+   ```
+
+   3. Navega al directorio del Servidor de Recursos:
+
+   ```bash
+   cd resource-server
+   ```
+
+   4. Ejecuta el servidor con
+
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
 ### Configuración del Frontend Angular
 
 1. Navega al directorio del frontend:
 
-    ```bash
-    cd ag-prueba-front
-    ```
+   ```bash
+   cd ag-prueba-front
+   ```
 
 2. Instala las dependencias de Node.js:
 
-    ```bash
-    npm install
-    ```
-4. Ejecuta la aplicación Angular:
+   ```bash
+   npm install
+   ```
 
-    ```bash
-    ng serve
-    ```
+3. Ejecuta la aplicación Angular:
+
+   ```bash
+   ng serve
+   ```
 
 ## Uso
 
@@ -101,3 +106,7 @@ Este proyecto de prueba demuestra la implementación de autenticación y autoriz
 5. Una vez autenticado, serás redirigido a la aplicación con acceso basado en los permisos otorgados y verás en el menú una opción nueva.
 
 La base de datos deberás de rellenarla. Hay endpoints para crear usuarios pero se puede rellenar manualmente. Los usuarios con el rol de "administrador" (ROLE_ADMIN) tendrán una opción más en el menú.
+
+## Pipeline Status Badges
+
+[![Observability & Performance Check](https://github.com/bgd6051/oauth2-springboot-angular-googlesignin-poc/actions/workflows/observability.yml/badge.svg)](https://github.com/bgd6051/oauth2-springboot-angular-googlesignin-poc/actions/workflows/observability.yml)
