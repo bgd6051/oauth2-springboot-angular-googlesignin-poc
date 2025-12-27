@@ -66,10 +66,11 @@ jobs:
           npx lhci collect --url=http://localhost:8080 --numberOfRuns=1
 
       - name: Upload Reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: observability-reports
           path: |
-            backend_health.json
+            authorization-server/backend_health.json
             api_perf_report.json
-            .lighthouseci/
+            ag-prueba-front/.lighthouseci/
