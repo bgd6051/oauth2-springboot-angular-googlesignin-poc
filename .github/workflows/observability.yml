@@ -46,8 +46,7 @@ jobs:
 
       - name: Run API Performance Test
         run: |
-          echo "import http from 'k6/http'; import { check } from 'k6'; export default function () { const res = http.get('http://localhost:9000/actuator/health'); \ 
-                check(res, { 'status is 200': (r) => r.status === 200, 'duration < 200ms': (r) => r.timings.duration < 200 }); }" > loadtest.js
+          echo "import http from 'k6/http'; import { check } from 'k6'; export default function () { const res = http.get('http://localhost:9000/actuator/health'); check(res, { 'status is 200': (r) => r.status === 200, 'duration < 200ms': (r) => r.timings.duration < 200 }); }" > loadtest.js
           ./k6 run loadtest.js --iterations 50 --summary-export=api_perf_report.json
 
       - name: Setup Node
