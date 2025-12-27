@@ -1,4 +1,4 @@
-name: Observability & Performance Check
+name: Observability & Performance Check (OKR 5)
 
 on:
   push:
@@ -9,6 +9,17 @@ on:
 jobs:
   metrics-analysis:
     runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: agprueba
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
     steps:
       - uses: actions/checkout@v4
 
@@ -22,9 +33,12 @@ jobs:
         run: |
           cd authorization-server 
           chmod +x mvnw
+          # Arrancamos el servidor en segundo plano
           ./mvnw spring-boot:run &
+          # Esperamos a que arranque (polling)
           echo "Esperando a que arranque el servidor..."
-          timeout 60s bash -c 'until curl -s http://localhost:9000/actuator/health | grep UP; do sleep 5; done'
+          # Aumentamos el timeout y la espera para dar tiempo a Spring y MySQL
+          timeout 120s bash -c 'until curl -s http://localhost:9000/actuator/health | grep UP; do sleep 5; done'
           echo "Backend UP. Obteniendo métricas..."
           curl -s http://localhost:9000/actuator/metrics > backend_metrics.json
           curl -s http://localhost:9000/actuator/health > backend_health.json
@@ -35,8 +49,8 @@ jobs:
 
       - name: Run API Performance Test
         run: |
-          echo "import http from 'k6/http'; import { check } from 'k6'; export default function () { const res = http.get('http://localhost:9000/actuator/health'); \
-              check(res, { 'status is 200': (r) => r.status === 200, 'duration < 200ms': (r) => r.timings.duration < 200 }); }" > loadtest.js
+          # Script de prueba ajustado
+          echo "import http from 'k6/http'; import { check } from 'k6'; export default function () { const res = http.get('http://localhost:9000/actuator/health'); check(res, { 'status is 200': (r) => r.status === 200, 'duration < 200ms': (r) => r.timings.duration < 200 }); }" > loadtest.js
           ./k6 run loadtest.js --iterations 50 --summary-export=api_perf_report.json
 
       - name: Setup Node
